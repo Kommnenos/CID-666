@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PassoPolicia.wav-08d1f0f838f9dee858a0f7ea4a1ee084.sample"
+
+[deps]
+
+source_file="res://assets/Sons/Policiais/PassoPolicia.wav"
+dest_files=[ "res://.import/PassoPolicia.wav-08d1f0f838f9dee858a0f7ea4a1ee084.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

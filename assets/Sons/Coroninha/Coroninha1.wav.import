@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Coroninha1.wav-8e4269df0ab3cd71490ad235698c295b.sample"
+
+[deps]
+
+source_file="res://assets/Sons/Coroninha/Coroninha1.wav"
+dest_files=[ "res://.import/Coroninha1.wav-8e4269df0ab3cd71490ad235698c295b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

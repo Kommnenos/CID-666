@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Chao-d.png" type="Texture" id=1]
+
+[node name="ChaoQuebrEsquerda" type="StaticBody2D"]
+collision_layer = 128
+collision_mask = 89
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 288.0
+margin_bottom = 256.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 0, 0, 0, 256, 272, 256, 224, 168, 224, 64, 208, 32, 208, 0 )

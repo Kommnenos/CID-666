@@ -1,0 +1,118 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Terreno/Chao.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Terreno/Teto.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Terreno/Concreto.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Terreno/ParaedeDireita.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Terreno/ParedeEsqureda.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Levels/Portal--6.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Levels/Portal--7.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 96, 136 )
+
+[node name="Level_10" type="Node2D"]
+position = Vector2( -592, -512 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Chao" type="Node2D" parent="Node2D"]
+
+[node name="Chao" parent="Node2D/Chao" instance=ExtResource( 1 )]
+position = Vector2( 304, 576 )
+
+[node name="Chao2" parent="Node2D/Chao" instance=ExtResource( 1 )]
+position = Vector2( 592, 576 )
+
+[node name="Chao3" parent="Node2D/Chao" instance=ExtResource( 1 )]
+position = Vector2( 880, 576 )
+
+[node name="Chao4" parent="Node2D/Chao" instance=ExtResource( 1 )]
+position = Vector2( 16, 576 )
+
+[node name="Chao5" parent="Node2D/Chao" instance=ExtResource( 1 )]
+position = Vector2( -272, 576 )
+
+[node name="Chao6" parent="Node2D/Chao" instance=ExtResource( 1 )]
+position = Vector2( 1168, 576 )
+
+[node name="Chao7" parent="Node2D/Chao" instance=ExtResource( 1 )]
+position = Vector2( 1456, 576 )
+
+[node name="Teto" type="Node2D" parent="Node2D"]
+
+[node name="Teto" parent="Node2D/Teto" instance=ExtResource( 2 )]
+position = Vector2( 1456, -192 )
+
+[node name="Teto2" parent="Node2D/Teto" instance=ExtResource( 2 )]
+position = Vector2( 1168, -192 )
+
+[node name="Teto3" parent="Node2D/Teto" instance=ExtResource( 2 )]
+position = Vector2( 880, -192 )
+
+[node name="Teto4" parent="Node2D/Teto" instance=ExtResource( 2 )]
+position = Vector2( 592, -192 )
+
+[node name="Teto5" parent="Node2D/Teto" instance=ExtResource( 2 )]
+position = Vector2( 304, -192 )
+
+[node name="Teto6" parent="Node2D/Teto" instance=ExtResource( 2 )]
+position = Vector2( 16, -192 )
+
+[node name="Teto7" parent="Node2D/Teto" instance=ExtResource( 2 )]
+position = Vector2( -272, -192 )
+
+[node name="ParEs" type="Node2D" parent="Node2D"]
+
+[node name="ParedeEsqureda2" parent="Node2D/ParEs" instance=ExtResource( 5 )]
+position = Vector2( -560, 64 )
+
+[node name="ParDir" type="Node2D" parent="Node2D"]
+
+[node name="ParedeDireita2" parent="Node2D/ParDir" instance=ExtResource( 4 )]
+position = Vector2( 1744, 64 )
+
+[node name="Concreto" type="Node2D" parent="Node2D"]
+
+[node name="Concreto" parent="Node2D/Concreto" instance=ExtResource( 3 )]
+margin_left = 1744.0
+margin_top = 576.0
+margin_right = 2032.0
+margin_bottom = 832.0
+
+[node name="Concreto2" parent="Node2D/Concreto" instance=ExtResource( 3 )]
+margin_left = 1744.0
+margin_top = -192.0
+margin_right = 2032.0
+margin_bottom = 64.0
+
+[node name="Concreto3" parent="Node2D/Concreto" instance=ExtResource( 3 )]
+margin_left = -560.0
+margin_top = 576.0
+margin_right = -272.0
+margin_bottom = 832.0
+
+[node name="Concreto4" parent="Node2D/Concreto" instance=ExtResource( 3 )]
+margin_left = -560.0
+margin_top = -192.0
+margin_right = -272.0
+margin_bottom = 64.0
+
+[node name="Portal--6" type="Area2D" parent="."]
+collision_layer = 0
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal--6"]
+position = Vector2( 1936, 448 )
+shape = SubResource( 1 )
+
+[node name="Portal--7" type="Area2D" parent="."]
+position = Vector2( -2408, 0 )
+collision_layer = 0
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal--7"]
+position = Vector2( 1936, 448 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="Portal--6" to="Portal--6" method="_on_Portal6_body_entered"]
+[connection signal="body_entered" from="Portal--7" to="Portal--7" method="_on_Portal7_body_entered"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MiasmaLoop.ogg-68646051706ba2b541bacd7a9d9e781d.oggstr"
+
+[deps]
+
+source_file="res://assets/Sons/Miasma/MiasmaLoop.ogg"
+dest_files=[ "res://.import/MiasmaLoop.ogg-68646051706ba2b541bacd7a9d9e781d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

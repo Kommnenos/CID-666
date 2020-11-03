@@ -1,0 +1,43 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scenes/Jogador/Coringa.gd" type="Script" id=1]
+[ext_resource path="res://assets/Jogador/Coringa/bolinha_06.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/BalaoTexto.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Jogador/Coringa/bolinha_07.png" type="Texture" id=4]
+[ext_resource path="res://assets/Jogador/Coringa/bolinha_01.png" type="Texture" id=5]
+[ext_resource path="res://assets/Jogador/Coringa/bolinha_02.png" type="Texture" id=6]
+[ext_resource path="res://assets/Jogador/Coringa/bolinha_04.png" type="Texture" id=7]
+[ext_resource path="res://assets/Jogador/Coringa/bolinha_08.png" type="Texture" id=8]
+[ext_resource path="res://assets/Jogador/Coringa/bolinha_05.png" type="Texture" id=9]
+[ext_resource path="res://assets/Jogador/Coringa/bolinha_03.png" type="Texture" id=10]
+[ext_resource path="res://assets/Jogador/Coringa/bolinha_09.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.5
+} ]
+
+[node name="Coringa" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="BalaoTexto" parent="." instance=ExtResource( 3 )]
+light_mask = 1
+position = Vector2( 0, -32 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.260374, 0.260374 )
+frames = SubResource( 2 )
+frame = 8
+playing = true

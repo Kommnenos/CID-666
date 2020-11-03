@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TiroPaciente0.wav-a3ce92758a57681221e24f645c28ad09.sample"
+
+[deps]
+
+source_file="res://assets/Sons/Paciente0/TiroPaciente0.wav"
+dest_files=[ "res://.import/TiroPaciente0.wav-a3ce92758a57681221e24f645c28ad09.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

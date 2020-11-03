@@ -1,0 +1,126 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Terreno/Chao.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Terreno/Teto.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Terreno/ParaedeDireita.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Terreno/ParedeEsqureda.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Terreno/Concreto.tscn" type="PackedScene" id=5]
+
+[node name="Level_8" type="Node2D"]
+
+[node name="Terreno" type="Node2D" parent="."]
+
+[node name="Chao" type="Node2D" parent="Terreno"]
+
+[node name="Chao" parent="Terreno/Chao" instance=ExtResource( 1 )]
+position = Vector2( 1664, 64 )
+
+[node name="Chao2" parent="Terreno/Chao" instance=ExtResource( 1 )]
+position = Vector2( 1376, 64 )
+
+[node name="Chao3" parent="Terreno/Chao" instance=ExtResource( 1 )]
+position = Vector2( 1088, 64 )
+
+[node name="Chao4" parent="Terreno/Chao" instance=ExtResource( 1 )]
+position = Vector2( 800, 64 )
+
+[node name="Chao5" parent="Terreno/Chao" instance=ExtResource( 1 )]
+position = Vector2( 512, 64 )
+
+[node name="Chao6" parent="Terreno/Chao" instance=ExtResource( 1 )]
+position = Vector2( 224, 64 )
+
+[node name="Chao7" parent="Terreno/Chao" instance=ExtResource( 1 )]
+position = Vector2( -64, 64 )
+
+[node name="Chao8" parent="Terreno/Chao" instance=ExtResource( 1 )]
+position = Vector2( -352, 64 )
+
+[node name="Teto" type="Node2D" parent="Terreno"]
+
+[node name="Teto" parent="Terreno/Teto" instance=ExtResource( 2 )]
+position = Vector2( -352, -1472 )
+
+[node name="Teto2" parent="Terreno/Teto" instance=ExtResource( 2 )]
+position = Vector2( -64, -1472 )
+
+[node name="Teto3" parent="Terreno/Teto" instance=ExtResource( 2 )]
+position = Vector2( 224, -1472 )
+
+[node name="Teto4" parent="Terreno/Teto" instance=ExtResource( 2 )]
+position = Vector2( 512, -1472 )
+
+[node name="Teto5" parent="Terreno/Teto" instance=ExtResource( 2 )]
+position = Vector2( 800, -1472 )
+
+[node name="Teto6" parent="Terreno/Teto" instance=ExtResource( 2 )]
+position = Vector2( 1088, -1472 )
+
+[node name="Teto7" parent="Terreno/Teto" instance=ExtResource( 2 )]
+position = Vector2( 1376, -1472 )
+
+[node name="Teto8" parent="Terreno/Teto" instance=ExtResource( 2 )]
+position = Vector2( 1664, -1472 )
+
+[node name="ParEs" type="Node2D" parent="Terreno"]
+
+[node name="ParedeEsqureda" parent="Terreno/ParEs" instance=ExtResource( 4 )]
+position = Vector2( -640, -192 )
+
+[node name="ParedeEsqureda2" parent="Terreno/ParEs" instance=ExtResource( 4 )]
+position = Vector2( -640, -448 )
+
+[node name="ParedeEsqureda3" parent="Terreno/ParEs" instance=ExtResource( 4 )]
+position = Vector2( -640, -704 )
+
+[node name="ParedeEsqureda4" parent="Terreno/ParEs" instance=ExtResource( 4 )]
+position = Vector2( -640, -960 )
+
+[node name="ParedeEsqureda5" parent="Terreno/ParEs" instance=ExtResource( 4 )]
+position = Vector2( -640, -1216 )
+
+[node name="ParDir" type="Node2D" parent="Terreno"]
+
+[node name="ParedeDireita" parent="Terreno/ParDir" instance=ExtResource( 3 )]
+position = Vector2( 1952, -1216 )
+
+[node name="ParedeDireita2" parent="Terreno/ParDir" instance=ExtResource( 3 )]
+position = Vector2( 1952, -960 )
+
+[node name="ParedeDireita3" parent="Terreno/ParDir" instance=ExtResource( 3 )]
+position = Vector2( 1952, -704 )
+
+[node name="ParedeDireita4" parent="Terreno/ParDir" instance=ExtResource( 3 )]
+position = Vector2( 1952, -448 )
+
+[node name="ParedeDireita5" parent="Terreno/ParDir" instance=ExtResource( 3 )]
+position = Vector2( 1952, -192 )
+
+[node name="COncreto" type="Node2D" parent="Terreno"]
+
+[node name="Concreto" parent="Terreno/COncreto" instance=ExtResource( 5 )]
+margin_left = 1952.0
+margin_top = 64.0
+margin_right = 2240.0
+margin_bottom = 320.0
+
+[node name="Concreto2" parent="Terreno/COncreto" instance=ExtResource( 5 )]
+margin_left = 1952.0
+margin_top = -1472.0
+margin_right = 2240.0
+margin_bottom = -1216.0
+
+[node name="Concreto3" parent="Terreno/COncreto" instance=ExtResource( 5 )]
+margin_left = -640.0
+margin_top = -1472.0
+margin_right = -352.0
+margin_bottom = -1216.0
+
+[node name="Concreto4" parent="Terreno/COncreto" instance=ExtResource( 5 )]
+margin_left = -640.0
+margin_top = 64.0
+margin_right = -352.0
+margin_bottom = 320.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.180392, 0.0196078, 0, 1 )

@@ -1,0 +1,365 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/Terreno/Chao.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Terreno/Teto.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Terreno/Concreto.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Terreno/ParaedeDireita.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Terreno/ParedeEsqureda.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Terreno/ChaoQuebrDireita.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Terreno/ChaoQuebrEsquerda.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Paciente.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Enimigos/ACAB.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Levels/Portal_7.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Levels/Portal_3.gd" type="Script" id=11]
+[ext_resource path="res://TileMapPadrao.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Lampada.tscn" type="PackedScene" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 136 )
+
+[node name="Level_2" type="Node2D"]
+
+[node name="Terreno" type="Node2D" parent="."]
+
+[node name="Concreto2" parent="Terreno" instance=ExtResource( 3 )]
+margin_left = 4480.0
+margin_top = -320.0
+margin_right = 4768.0
+margin_bottom = -64.0
+
+[node name="Concreto3" parent="Terreno" instance=ExtResource( 3 )]
+margin_left = -3008.0
+margin_top = -328.0
+margin_right = -2720.0
+margin_bottom = -72.0
+
+[node name="Concreto4" parent="Terreno" instance=ExtResource( 3 )]
+margin_left = -3008.0
+margin_top = 3008.0
+margin_right = -2720.0
+margin_bottom = 3264.0
+
+[node name="Tetos" type="Node2D" parent="Terreno"]
+
+[node name="Teto2" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( -704, -320 )
+
+[node name="Teto3" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 160, -320 )
+
+[node name="Teto4" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 448, -320 )
+
+[node name="Teto5" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( -992, -320 )
+
+[node name="Teto6" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 736, -320 )
+
+[node name="Teto7" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 1024, -320 )
+
+[node name="Teto8" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 1312, -320 )
+
+[node name="Teto9" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 1600, -320 )
+
+[node name="Teto10" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( -1280, -320 )
+
+[node name="Teto11" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( -1568, -320 )
+
+[node name="Teto12" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 1888, -320 )
+
+[node name="Teto13" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 2176, -320 )
+
+[node name="Teto14" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 2464, -320 )
+
+[node name="Teto15" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 2752, -320 )
+
+[node name="Teto16" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 3040, -320 )
+
+[node name="Teto17" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 3328, -320 )
+
+[node name="Teto18" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 3616, -320 )
+
+[node name="Teto19" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( -1856, -320 )
+
+[node name="Teto20" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( -2144, -320 )
+
+[node name="Teto21" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( -2432, -320 )
+
+[node name="Teto22" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( -2720, -320 )
+
+[node name="Teto23" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 3904, -320 )
+
+[node name="Teto24" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( 4192, -320 )
+
+[node name="Teto25" parent="Terreno/Tetos" instance=ExtResource( 2 )]
+position = Vector2( -416, -320 )
+
+[node name="ParedesEsquerda" type="Node2D" parent="Terreno"]
+
+[node name="ParedeEsqureda" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, -64 )
+
+[node name="ParedeEsqureda2" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 192 )
+
+[node name="ParedeEsqureda3" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 448 )
+
+[node name="ParedeEsqureda4" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 704 )
+
+[node name="ParedeEsqureda5" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 960 )
+
+[node name="ParedeEsqureda6" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 1216 )
+
+[node name="ParedeEsqureda7" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 1472 )
+
+[node name="ParedeEsqureda8" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 1728 )
+
+[node name="ParedeEsqureda9" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 1984 )
+
+[node name="ParedeEsqureda10" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 2240 )
+
+[node name="ParedeEsqureda11" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 2496 )
+
+[node name="ParedeEsqureda12" parent="Terreno/ParedesEsquerda" instance=ExtResource( 5 )]
+position = Vector2( -3008, 2752 )
+
+[node name="ParedesDir" type="Node2D" parent="Terreno"]
+
+[node name="ParedeDireita2" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 2496 )
+
+[node name="ParedeDireita3" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 2240 )
+
+[node name="ParedeDireita4" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 1984 )
+
+[node name="ParedeDireita5" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 1728 )
+
+[node name="ParedeDireita6" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 1472 )
+
+[node name="ParedeDireita7" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 1216 )
+
+[node name="ParedeDireita8" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 960 )
+
+[node name="ParedeDireita9" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 704 )
+
+[node name="ParedeDireita10" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 448 )
+
+[node name="ParedeDireita11" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, 192 )
+
+[node name="ParedeDireita12" parent="Terreno/ParedesDir" instance=ExtResource( 4 )]
+position = Vector2( 4480, -64 )
+
+[node name="Chaos" type="Node2D" parent="Terreno"]
+
+[node name="Chao" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( -2720, 3008 )
+
+[node name="Chao2" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 4192, 3008 )
+
+[node name="Chao24" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 4480, 3008 )
+
+[node name="Chao25" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 4768, 3008 )
+
+[node name="Chao26" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 4768, 3008 )
+
+[node name="Chao3" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 3904, 3008 )
+
+[node name="Chao4" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 3616, 3008 )
+
+[node name="Chao5" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 3328, 3008 )
+
+[node name="Chao6" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 3040, 3008 )
+
+[node name="Chao7" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 2752, 3008 )
+
+[node name="Chao8" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 2464, 3008 )
+
+[node name="Chao9" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 2176, 3008 )
+
+[node name="Chao10" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 1888, 3008 )
+
+[node name="Chao11" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 1600, 3008 )
+
+[node name="Chao12" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 1312, 3008 )
+
+[node name="Chao13" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 1024, 3008 )
+
+[node name="Chao14" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 736, 3008 )
+
+[node name="Chao15" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 448, 3008 )
+
+[node name="Chao16" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( 160, 3008 )
+
+[node name="Chao17" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( -128, 3008 )
+
+[node name="Chao18" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( -416, 3008 )
+
+[node name="Chao19" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( -704, 3008 )
+
+[node name="Chao20" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( -992, 3008 )
+
+[node name="Chao21" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( -1280, 3008 )
+
+[node name="Chao22" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( -1568, 3008 )
+
+[node name="Chao23" parent="Terreno/Chaos" instance=ExtResource( 1 )]
+position = Vector2( -1856, 3008 )
+
+[node name="ChaosQuebr" type="Node2D" parent="Terreno"]
+
+[node name="ChaoQuebrEsquerda" parent="Terreno/ChaosQuebr" instance=ExtResource( 7 )]
+position = Vector2( 352, -64 )
+rotation = 3.14159
+
+[node name="ChaoQuebrEsquerda2" parent="Terreno/ChaosQuebr" instance=ExtResource( 7 )]
+position = Vector2( -2624, 3008 )
+
+[node name="ChaoQuebrDireita" parent="Terreno/ChaosQuebr" instance=ExtResource( 6 )]
+position = Vector2( -16, -64 )
+rotation = 3.14159
+
+[node name="ChaoQuebrDireita2" parent="Terreno/ChaosQuebr" instance=ExtResource( 6 )]
+position = Vector2( -2144, 3008 )
+
+[node name="Node2D" type="Node2D" parent="Terreno"]
+
+[node name="ParedeEsqureda13" parent="Terreno/Node2D" instance=ExtResource( 5 )]
+position = Vector2( -1288, 2784 )
+
+[node name="ParedeEsqureda14" parent="Terreno/Node2D" instance=ExtResource( 5 )]
+position = Vector2( -1288, 1248 )
+
+[node name="ParedeEsqureda15" parent="Terreno/Node2D" instance=ExtResource( 5 )]
+position = Vector2( -1288, 1504 )
+
+[node name="ParedeEsqureda16" parent="Terreno/Node2D" instance=ExtResource( 5 )]
+position = Vector2( -1288, 1760 )
+
+[node name="ParedeEsqureda17" parent="Terreno/Node2D" instance=ExtResource( 5 )]
+position = Vector2( -1288, 2016 )
+
+[node name="ParedeEsqureda18" parent="Terreno/Node2D" instance=ExtResource( 5 )]
+position = Vector2( -1288, 2272 )
+
+[node name="ParedeEsqureda19" parent="Terreno/Node2D" instance=ExtResource( 5 )]
+position = Vector2( -1288, 2528 )
+
+[node name="Pacientes" type="Node2D" parent="."]
+
+[node name="Paciente" parent="Pacientes" instance=ExtResource( 8 )]
+position = Vector2( -1696, 3008 )
+
+[node name="Paciente2" parent="Pacientes" instance=ExtResource( 8 )]
+position = Vector2( 3584, 2960 )
+
+[node name="ACAB" type="Node2D" parent="."]
+
+[node name="ACAB" parent="ACAB" instance=ExtResource( 9 )]
+position = Vector2( -1152, 1216 )
+
+[node name="ACAB2" parent="ACAB" instance=ExtResource( 9 )]
+position = Vector2( -1384, 2976 )
+
+[node name="ACAB3" parent="ACAB" instance=ExtResource( 9 )]
+position = Vector2( -2664, 2976 )
+
+[node name="ACAB4" parent="ACAB" instance=ExtResource( 9 )]
+position = Vector2( 3424, 2976 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.670588, 0.25098, 0.878431, 1 )
+
+[node name="Portal_7" type="Area2D" parent="."]
+position = Vector2( -2240, 3240 )
+collision_layer = 0
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_7"]
+shape = SubResource( 1 )
+
+[node name="Portal_3" type="Area2D" parent="."]
+position = Vector2( 4792, 2952 )
+collision_layer = 0
+script = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_3"]
+position = Vector2( -24, -80 )
+shape = SubResource( 1 )
+
+[node name="TileMapPadrao" parent="." instance=ExtResource( 12 )]
+cell_size = Vector2( 20, 20 )
+collision_layer = 4
+collision_mask = 0
+tile_data = PoolIntArray( 5046223, 4, 0, 6750158, 4, 0, 8257486, 4, 0 )
+
+[node name="Lampada" parent="." instance=ExtResource( 13 )]
+position = Vector2( 3544, 2728 )
+
+[node name="Lampada2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2512, 2232 )
+
+[node name="Lampada3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1216, 2240 )
+[connection signal="body_entered" from="Portal_7" to="Portal_7" method="_on_Portal_7_body_entered"]
+[connection signal="body_entered" from="Portal_3" to="Portal_3" method="_on_Portal_3_body_entered"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PassoRoberto.wav-33b44afdd6fa23016a5caffcb04fe7ec.sample"
+
+[deps]
+
+source_file="res://assets/Sons/Roberto/PassoRoberto.wav"
+dest_files=[ "res://.import/PassoRoberto.wav-33b44afdd6fa23016a5caffcb04fe7ec.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

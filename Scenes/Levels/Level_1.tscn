@@ -1,0 +1,119 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/Terreno/Teto.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Chao.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Terreno/ParaedeDireita.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Terreno/ParedeEsqureda.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Terreno/ChaoQuebrDireita.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Terreno/ChaoQuebrEsquerda.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Terreno/Concreto.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Paciente.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/DialogoThrigger.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Levels/Portal_2.gd" type="Script" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 240, 64 )
+
+[node name="Level_1" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.211765, 0.513726, 0.878431, 1 )
+
+[node name="Terreno" type="Node2D" parent="."]
+
+[node name="Teto" parent="Terreno" instance=ExtResource( 1 )]
+position = Vector2( -496, -1272 )
+
+[node name="Teto2" parent="Terreno" instance=ExtResource( 1 )]
+position = Vector2( -208, -1272 )
+
+[node name="Teto3" parent="Terreno" instance=ExtResource( 1 )]
+position = Vector2( 80, -1272 )
+
+[node name="Teto4" parent="Terreno" instance=ExtResource( 1 )]
+position = Vector2( 368, -1272 )
+
+[node name="Teto5" parent="Terreno" instance=ExtResource( 1 )]
+position = Vector2( 656, -1272 )
+
+[node name="Teto6" parent="Terreno" instance=ExtResource( 1 )]
+position = Vector2( 944, -1272 )
+
+[node name="Teto7" parent="Terreno" instance=ExtResource( 1 )]
+position = Vector2( 1232, -1272 )
+
+[node name="ParedeDireita" parent="Terreno" instance=ExtResource( 3 )]
+position = Vector2( 1520, -1016 )
+
+[node name="ParedeDireita2" parent="Terreno" instance=ExtResource( 3 )]
+position = Vector2( 1520, -760 )
+
+[node name="ParedeDireita3" parent="Terreno" instance=ExtResource( 3 )]
+position = Vector2( 1520, -504 )
+
+[node name="ParedeDireita4" parent="Terreno" instance=ExtResource( 3 )]
+position = Vector2( 1520, -248 )
+
+[node name="ParedeEsqureda" parent="Terreno" instance=ExtResource( 4 )]
+position = Vector2( -784, -248 )
+
+[node name="ParedeEsqureda2" parent="Terreno" instance=ExtResource( 4 )]
+position = Vector2( -784, -504 )
+
+[node name="ParedeEsqureda3" parent="Terreno" instance=ExtResource( 4 )]
+position = Vector2( -784, -760 )
+
+[node name="ParedeEsqureda4" parent="Terreno" instance=ExtResource( 4 )]
+position = Vector2( -784, -1016 )
+
+[node name="Chao" parent="Terreno" instance=ExtResource( 2 )]
+position = Vector2( -496, 8 )
+
+[node name="ChaoQuebrEsquerda" parent="Terreno" instance=ExtResource( 6 )]
+position = Vector2( 528, 8 )
+
+[node name="ChaoQuebrDireita" parent="Terreno" instance=ExtResource( 5 )]
+position = Vector2( 1240, 8 )
+
+[node name="Node2D" type="Node2D" parent="Terreno"]
+
+[node name="Concreto" parent="Terreno/Node2D" instance=ExtResource( 7 )]
+margin_left = -784.0
+margin_top = 8.0
+margin_right = -496.0
+margin_bottom = 264.0
+
+[node name="Concreto2" parent="Terreno/Node2D" instance=ExtResource( 7 )]
+margin_left = -784.0
+margin_top = -1272.0
+margin_right = -496.0
+margin_bottom = -1016.0
+
+[node name="Concreto3" parent="Terreno/Node2D" instance=ExtResource( 7 )]
+margin_left = 1520.0
+margin_top = -1272.0
+margin_right = 1808.0
+margin_bottom = -1016.0
+
+[node name="Concreto4" parent="Terreno/Node2D" instance=ExtResource( 7 )]
+margin_left = 1528.0
+margin_top = 8.0
+margin_right = 1816.0
+margin_bottom = 264.0
+
+[node name="Paciente" parent="." instance=ExtResource( 8 )]
+position = Vector2( 608, 8 )
+
+[node name="Dialogo_1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 0, -64 )
+scale = Vector2( 5.89935, 4.0592 )
+
+[node name="Portal_2" type="Area2D" parent="."]
+position = Vector2( 1040, 144 )
+collision_layer = 0
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_2"]
+position = Vector2( -8, 56 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="Portal_2" to="Portal_2" method="_on_Portal_2_body_entered"]

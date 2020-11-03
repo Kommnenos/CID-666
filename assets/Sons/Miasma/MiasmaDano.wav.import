@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MiasmaDano.wav-3e82de3bfe5b18969c2a47ea78e43336.sample"
+
+[deps]
+
+source_file="res://assets/Sons/Miasma/MiasmaDano.wav"
+dest_files=[ "res://.import/MiasmaDano.wav-3e82de3bfe5b18969c2a47ea78e43336.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
