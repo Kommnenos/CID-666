@@ -61,15 +61,21 @@ func movimento():
 		if movimento.x > -velocidadeMax:
 			movimento.x -= XLR8
 			dir = -1
-			$AnimatedSprite.play("WalkR")
+			$AnimatedSprite.play("WalL")
+			$AnimatedSprite.playing = true
 		else:
 			movimento.x = -velocidadeMax
+			$AnimatedSprite.playing = true
+			$AnimatedSprite.play("WalL")
 	elif Input.is_action_pressed("Right"):
 		if movimento.x < velocidadeMax:
 			movimento.x += XLR8
 			dir = 1
+			$AnimatedSprite.playing = true
+			$AnimatedSprite.play("WalkR")
 	else:
 		movimento.x = lerp(movimento.x, 0, atrito)
+		$AnimatedSprite.playing = false
 	
 func pulo():
 	
