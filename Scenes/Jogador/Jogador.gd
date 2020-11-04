@@ -11,6 +11,7 @@ const LIMMUNDO = 7000
 var atrito = 0.185
 var XLR8 = 100
 var puloDuplo = true
+var puloDuploEnable = true
 ##Variáveis
 var cadencia
 var dano = 1
@@ -18,7 +19,7 @@ var alcance
 var projVel = 900
 var dir = 1
 var vida = 100
-
+var BisturiBrabo = false
 
 func _ready():
 	position = Vector2(4000, 4000)
@@ -40,8 +41,12 @@ func unpause_player(boolean = true):
 	self.set_process_internal(boolean)
 	self.set_process_unhandled_input(boolean)
 	self.set_process_unhandled_key_input(boolean)
+	$HUD/TextureProgress.visible = true
+
+
 	
 func _physics_process(delta):
+	
 	gravidade()
 	movimento()
 	pulo()
@@ -97,22 +102,29 @@ func gravidade():
 		movimento.y += GRAVIDADE
 	
 func bisturi():
-	if Input.is_action_just_pressed("Fire"):
+	if Input.is_action_just_pressed("Fire") and BisturiBrabo == false:
 		$TiroSom.play()
 		var bisturi = load("res://Scenes/Jogador/Bisturi.tscn").instance()
 		bisturi.projVel = projVel * dir
 		bisturi.dano = dano
 		add_child(bisturi)
-
+	elif Input.is_action_just_pressed("Fire") and BisturiBrabo == true:
+		$TiroSom.play()
+		var bisturi = load("res://Scenes/Jogador/BisturiBrabo.tscn").instance()
+		bisturi.projVel = projVel * dir
+		bisturi.dano = dano + 5
+		add_child(bisturi)
+		print("Brabokkkjj")
 func sangue():
 	vida += vida / 2	
 	
 func dano(dano):
 	$DanoSom.play()
-	vida -= dano
+	vida -= dano + 9
 	if vida <= 0:
-		print("ded")
-		
+		get_node("/root/Manager").on_level_change(1, Vector2(1472, -64))
+		get_node("Coringa").set_texto("O seu poder torna a morte algo trivial.")
+		vida = 100
 
 
 func _on_Area2D_body_exited(body):

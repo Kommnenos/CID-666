@@ -1,11 +1,12 @@
 extends KinematicBody2D
 
-var divisaoNum
+var divisaoNum = 0
 var vidas
 var movimento
 var speed = 750
 var velocity = Vector2(500, -500)
 var vida = 10
+var vidamax = 10
 
 const CIMA = Vector2(0, -1)
 
@@ -27,21 +28,28 @@ func dano(dano_recebido):
 		mitose()
 	
 func mitose():
-	
-	var filha1 = load("res://Scenes/Enimigos/BOSS/CoringaVirusBoss.tscn").instance()
-	var filha2 = load("res://Scenes/Enimigos/BOSS/CoringaVirusBoss.tscn").instance()
-	
-	filha1.scale = self.scale / 2
-	filha2.scale = self.scale / 2
-	var alvo = position
-	filha1.global_position = global_position
-	filha2.global_position = global_position
-	
-	get_parent().add_child(filha1)
-	get_parent().add_child(filha2)
-	filha1.get_node("SeparaSom").play()
-	queue_free()
-	
+	if divisaoNum < 4:
+		var filha1 = load("res://Scenes/Enimigos/BOSS/CoringaVirusBoss.tscn").instance()
+		var filha2 = load("res://Scenes/Enimigos/BOSS/CoringaVirusBoss.tscn").instance()
+		
+		filha1.scale = self.scale / 2
+		filha2.scale = self.scale / 2
+		var alvo = position
+		filha1.global_position = global_position
+		filha2.global_position = global_position
+		filha1.divisaoNum = divisaoNum + 1
+		filha2.divisaoNum = divisaoNum + 1
+		filha1.vida = vidamax / 2
+		filha2.vida = vidamax / 2
+		filha1.vidamax = vidamax / 2
+		filha2.vidamax = vidamax / 2
+		get_parent().add_child(filha1)
+		get_parent().add_child(filha2)
+		filha1.get_node("SeparaSom").play()
+		queue_free()
+	else:
+		get_node("/root/Manager").boss2ded()
+		queue_free()
 
 
 

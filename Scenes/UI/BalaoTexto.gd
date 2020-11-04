@@ -4,15 +4,15 @@ onready var textLabel = $Ancora/RichTextLabel
 
 onready var textBG = $Ancora/ColorRect
 
-const CHAR_TIME = 0.08
-var margem = 0
+const CHAR_TIME = 0.06
+var margem = 90
 
 func _ready():
 	
 	visible = false
 	
 	
-func set_texto(texto, tempo = 3):
+func set_texto(texto, tempo = 1.75):
 	visible = true
 	
 	$Timer.wait_time = tempo
@@ -24,6 +24,7 @@ func set_texto(texto, tempo = 3):
 	var tamanhoTexto = textLabel.get_font("normal_font").get_string_size(textLabel.text)
 	textLabel.margin_right = tamanhoTexto.x + margem
 	textBG.margin_right = tamanhoTexto.x + margem
+	
 	##Duração
 	var duration = textLabel.text.length() * CHAR_TIME
 	
@@ -69,3 +70,4 @@ func _on_Timer_timeout():
 func _on_AudioStreamPlayer_finished():
 	if $Tween.is_active():
 		dialogo()
+

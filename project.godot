@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Spoopy"
+config/name="CID 666"
 run/main_scene="res://Scenes/UI/MenuPrincipal.tscn"
 config/icon="res://icon.png"
 

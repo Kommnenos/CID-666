@@ -7,8 +7,8 @@ var counter = 0
 var movimento = Vector2(0, 0)
 const CIMA = Vector2(0, -1)
 var velocidade = 50
-var alcance = 500
-
+var alcance = 380
+var atirando = false
 var dirJogador = 0
 var moveKey = -1
 
@@ -38,18 +38,24 @@ func _process(delta):
 #	draw_circle($Sprite.position, alcance, Color(0, 0, 255, 0.01))	
 #
 func gooseStep():
-	if moveKey == -1:
+	if moveKey == -1 and not atirando:
 		movimento.x = -velocidade
 		moveKey = 0
 		$TimerAndar.start()
-	elif moveKey == 0:
+		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.play("AndandoPol")
+	elif moveKey == 0 and not atirando:
 		movimento.x = velocidade
 		moveKey = 1
 		$TimerAndar.start()
-	elif moveKey == 1:
+		$AnimatedSprite.flip_h = false
+		$AnimatedSprite.play("AndandoPol")
+	elif moveKey == 1 and not atirando:
 		movimento.x = -velocidade
 		moveKey = 0
 		$TimerAndar.start()
+		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.play("AndandoPol")
 	
 	
 	
@@ -84,6 +90,10 @@ func fire():
 	
 	##Atirar à direita
 	if dirJogador == 1:
+		atirando = true
+		$AnimatedSprite.flip_h = false
+		$AnimatedSprite.play("TiroPol")
+		movimento.x = 0
 		bala1.projVelX = 300
 		bala1.projVelY = -300
 		bala2.projVelX = 300
@@ -93,6 +103,10 @@ func fire():
 	
 	##Atirar à esquerda
 	if dirJogador == -1:
+		atirando = true
+		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.play("TiroPol")
+		movimento.x = 0
 		bala1.projVelX = -300
 		bala1.projVelY = -300
 		bala2.projVelX = -300
@@ -125,6 +139,8 @@ func _on_TimerBurst_timeout():
 func _on_TimerTiro_timeout():
 	counter = 0
 	canFire = true
+	atirando = false
+	gooseStep()
 	
 	
 	

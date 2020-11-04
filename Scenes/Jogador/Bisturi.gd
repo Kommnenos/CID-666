@@ -18,11 +18,11 @@ func colisao():
 		
 		if coisa is StaticBody2D:
 			queue_free()
-		
 		if coisa.is_in_group("Minions") or coisa.is_in_group("Boss"):
 			coisa.dano(dano)
 			queue_free()	
 			
+		
 		
 
 func _on_Timer_timeout():

@@ -1,12 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Jogador/tequila.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scenes/UI/MenuPrincipal.gd" type="Script" id=2]
+[ext_resource path="res://assets/grey_button14.png" type="Texture" id=3]
+[ext_resource path="res://assets/Design_sem_nome.png" type="Texture" id=4]
 
 [node name="MenuPrincipal" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 4 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -26,28 +37,66 @@ margin_right = 1040.0
 [node name="FilaMeio" type="HBoxContainer" parent="Menu"]
 margin_top = 4.0
 margin_right = 1040.0
-margin_bottom = 204.0
+margin_bottom = 159.0
 
 [node name="Botoes" type="VBoxContainer" parent="Menu/FilaMeio"]
-margin_right = 64.0
-margin_bottom = 200.0
+margin_right = 190.0
+margin_bottom = 155.0
 
 [node name="Jogar" type="TextureButton" parent="Menu/FilaMeio/Botoes"]
-margin_right = 64.0
-margin_bottom = 64.0
-texture_normal = ExtResource( 1 )
+margin_right = 190.0
+margin_bottom = 49.0
+texture_normal = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Menu/FilaMeio/Botoes/Jogar"]
+margin_left = 28.6055
+margin_top = -9.00543
+margin_right = 156.605
+margin_bottom = 45.9946
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Jogar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Creditar" type="TextureButton" parent="Menu/FilaMeio/Botoes"]
-margin_top = 68.0
-margin_right = 64.0
-margin_bottom = 132.0
-texture_normal = ExtResource( 1 )
+margin_top = 53.0
+margin_right = 190.0
+margin_bottom = 102.0
+texture_normal = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Menu/FilaMeio/Botoes/Creditar"]
+margin_left = -2.17416
+margin_top = -25.6379
+margin_right = 192.826
+margin_bottom = 71.3621
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Créditos"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Vazar" type="TextureButton" parent="Menu/FilaMeio/Botoes"]
-margin_top = 136.0
-margin_right = 64.0
-margin_bottom = 200.0
-texture_normal = ExtResource( 1 )
+margin_top = 106.0
+margin_right = 190.0
+margin_bottom = 155.0
+texture_normal = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Menu/FilaMeio/Botoes/Vazar"]
+margin_left = 48.7353
+margin_top = -8.47569
+margin_right = 136.735
+margin_bottom = 46.5243
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Sair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Menu/FilaMeio/Botoes/Jogar" to="." method="_on_Jogar_pressed"]
 [connection signal="pressed" from="Menu/FilaMeio/Botoes/Creditar" to="." method="_on_Creditar_pressed"]
 [connection signal="pressed" from="Menu/FilaMeio/Botoes/Vazar" to="." method="_on_Vazar_pressed"]

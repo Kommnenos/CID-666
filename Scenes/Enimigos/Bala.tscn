@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://assets/BalaPolicial.png" type="Texture" id=1]
 [ext_resource path="res://Bala.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 3.99314, 3.83518 )
+extents = Vector2( 8, 2.9443 )
 
 [node name="Bala" type="Area2D"]
+scale = Vector2( 1.56, 1.56 )
 collision_layer = 64
 collision_mask = 5
 script = ExtResource( 2 )
