@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Suga.ogg-046c67287c0e002cf07a789865f0c5ef.oggstr"
+
+[deps]
+
+source_file="res://assets/video/Suga.ogg"
+dest_files=[ "res://.import/Suga.ogg-046c67287c0e002cf07a789865f0c5ef.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

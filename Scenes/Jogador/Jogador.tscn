@@ -82,7 +82,7 @@ position = Vector2( 4.45451, 2.67269 )
 scale = Vector2( 0.137148, 0.137148 )
 frames = SubResource( 1 )
 animation = "WalkR"
-frame = 7
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

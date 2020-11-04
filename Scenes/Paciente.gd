@@ -15,6 +15,7 @@ func _process(delta):
 			Player.sangue()
 			used = true
 			$Sprite.texture = load("res://assets/Paciente-Sugando-cama_03.png")
+			$AudioStreamPlayer.play()
 func _on_Paciente_body_entered(body):
 	Player = body
 	playerInArea = true
