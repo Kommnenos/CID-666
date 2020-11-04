@@ -14,7 +14,7 @@ func _process(delta):
 			print("lelek")
 			Player.sangue()
 			used = true
-		
+			$Sprite.texture = load("res://assets/Paciente-Sugando-cama_03.png")
 func _on_Paciente_body_entered(body):
 	Player = body
 	playerInArea = true

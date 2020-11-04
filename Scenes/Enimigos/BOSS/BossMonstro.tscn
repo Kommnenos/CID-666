@@ -26,9 +26,5 @@ one_shot = true
 [node name="CanhaoMira" type="Position2D" parent="."]
 position = Vector2( 1512, 528 )
 scale = Vector2( 1.76, 1.76 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 3, 3 )
 [connection signal="timeout" from="TimerSangue" to="." method="_on_TimerSangue_timeout"]
 [connection signal="timeout" from="TimerCanhao" to="." method="_on_TimerCanhao_timeout"]

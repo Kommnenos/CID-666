@@ -11,7 +11,7 @@ const LIMMUNDO = 7000
 var atrito = 0.185
 var XLR8 = 100
 var puloDuplo = true
-var puloDuploEnable = true
+var puloDuploEnable = false
 ##Variáveis
 var cadencia
 var dano = 1
@@ -61,6 +61,7 @@ func movimento():
 		if movimento.x > -velocidadeMax:
 			movimento.x -= XLR8
 			dir = -1
+			$AnimatedSprite.play("WalkR")
 		else:
 			movimento.x = -velocidadeMax
 	elif Input.is_action_pressed("Right"):
@@ -77,7 +78,7 @@ func pulo():
 		movimento.y -= puloVelocidade
 		puloDuplo = true
 	
-	elif Input.is_action_just_pressed("Jump") && puloDuplo && not Input.is_action_pressed("Down"):
+	elif Input.is_action_just_pressed("Jump") && puloDuplo && not Input.is_action_pressed("Down") and puloDuploEnable:
 		movimento.y = 0
 		puloDuplo = false
 		movimento.y -= puloVelocidade

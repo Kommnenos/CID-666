@@ -34,7 +34,7 @@ func tiro_canhao():
 	
 func dano(dano):
 	vida -= dano
-	$TimerSangue.wait_time = $TimerSangue.wait_time / 10	
+		
 	if vida <= 0:
 		get_node("/root/Jogador").puloDuploEnable = true
 		get_node("/root/Manager").boss1ded()
